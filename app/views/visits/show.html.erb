@@ -1,0 +1,28 @@
+<h2>Visit Information</h2>
+<p>
+  <strong>Pet:</strong>
+  <%= link_to @visit.pet.name, pet_path(@visit.pet) %>
+</p>
+<p>
+  <strong>Owner:</strong>
+  <%= link_to "#{@visit.pet.owner.first_name} #{@visit.pet.owner.last_name}", owner_path(@visit.pet.owner) %>
+</p>
+<p>
+  <strong>Animal:</strong>
+  <%= @visit.pet.animal %>
+</p>
+<p>
+  <strong>Visit Date:</strong>
+  <%= @visit.date.strftime("%B %d, %Y") %>
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @visit.weight %> lbs.
+</p>
+
+<p class="supertiny">&nbsp;</p>
+<p>
+  <%= link_to "Edit", edit_visit_path(@visit) %> |
+  <%= link_to "Destroy", @visit, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", visits_path %>
+</p>

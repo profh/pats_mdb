@@ -1,0 +1,36 @@
+<%= form_for(@pet) do |f| %>
+  <% if @pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+      <% @pet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<table border="0" cellspacing="5" cellpadding="5">
+  <tr>
+    <td valign="top">
+      <%= render "pet_fields", :f => f %>
+    </td>
+    <td>&nbsp;</td>
+    <td valign="top">
+      <div id="pet_visits">
+    		<%= f.fields_for :visits do |visit_form| %>
+    			<%= render "visit_fields", :f => visit_form %>
+    			<p class="supertiny">&nbsp;</p>
+    		<% end %>
+    		<p>&nbsp;</p>
+    	</div>
+    </td>
+  </tr>
+</table>
+<p>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+</p>
+<% end %>

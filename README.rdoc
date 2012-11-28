@@ -1,0 +1,4 @@
+PATS - MongoDB Version 
+------------
+This is a simple version of the PATS system using MongoDB and the mongoid gem that was done in 67-311 (Fall 2012).  There is excellent documentation for the mongoid gem at http://mongoid.org/en/mongoid/index.html that students should review as they work through this example.  There are plenty of extensions to this project with MongoDB that students can explore later to gain greater mastery.  Be sure to have MongoDB up and running before executing 'rails server' on your local machine.
+
