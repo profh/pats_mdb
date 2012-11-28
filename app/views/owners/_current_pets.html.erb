@@ -8,7 +8,7 @@
 <% for pet in @current_pets %>
   <tr class="<%= cycle('dg_list_line_odd', 'dg_list_line_even') %>">
     <td align="left">&nbsp;<%= link_to pet.name, pet_path(pet) %></td>
-	<td align="left">&nbsp;<%= pet.animal.name %></td>
+	<td align="left">&nbsp;<%= pet.animal %></td>
   </tr>
 <% end %>
 </table>

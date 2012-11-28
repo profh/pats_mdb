@@ -13,10 +13,13 @@
 
 <table border="0" cellspacing="5" cellpadding="5">
   <tr>
+    <!-- fields for pets data -->
     <td valign="top">
       <%= render "pet_fields", :f => f %>
     </td>
     <td>&nbsp;</td>
+    
+    <!-- fields for embedded visits data -->
     <td valign="top">
       <div id="pet_visits">
     		<%= f.fields_for :visits do |visit_form| %>
